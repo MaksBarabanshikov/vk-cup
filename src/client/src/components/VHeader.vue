@@ -1,15 +1,19 @@
 <script setup lang="ts">
- import logo from "../assets/img/icons/logo.png"
+  import logoLight from '@/assets/img/icons/logo-light.svg';
+  import logoDark from '@/assets/img/icons/logo-dark.svg';
+  import { useDark } from '@vueuse/core';
+  import { computed } from 'vue';
+
+  const currentLogo = computed(() => useDark() ? logoDark : logoLight);
 </script>
 
 <template>
-<header class="header bg-white dark:bg-dark-light">
-<div class="header__logo py-[12px] px-[16px] rounded-t-lg">
-  <img :src="logo" alt="mail ru">
-</div>
-</header>
+  <header class="header bg-white dark:bg-dark-light">
+    <div class="header__logo base-p rounded-t-lg">
+      <img :src="currentLogo" alt="mail ru" />
+    </div>
+  </header>
 </template>
-
 
 <style lang="scss">
   header {

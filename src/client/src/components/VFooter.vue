@@ -1,14 +1,15 @@
 <script setup>
-import {useDark, useToggle} from "@vueuse/core";
+  import { useDark, useToggle } from '@vueuse/core';
 
-const isDark = useDark();
+  const isDark = useDark();
 
-const toggleDark = useToggle(isDark)
-
+  const toggleDark = useToggle(isDark);
 </script>
 
 <template>
-  <h2 @click="toggleDark()" class="cursor-pointer">Тема: {{ isDark ? 'Темная' : 'Светлая' }}</h2>
+  <h2 @click="toggleDark()" class="cursor-pointer">
+    Тема: {{ isDark ? 'Темная' : 'Светлая' }}
+  </h2>
 </template>
 
 <style lang="scss" scoped>

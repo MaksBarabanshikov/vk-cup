@@ -5,8 +5,25 @@
 html {
   @apply bg-gray;
   color: #333333;
+  height: 100vh;
 
   &.dark {
     @apply bg-dark text-white;
   }
+}
+
+//body {
+//  @apply h-full;
+//}
+
+div#app {
+  @apply flex flex-col h-screen;
+}
+
+.base-p {
+  @apply px-3 py-[12px];
+}
+
+main {
+  height: 100%;
 }

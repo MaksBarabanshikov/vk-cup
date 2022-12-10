@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,ts,vue}",
-  ],
+  content: ['./src/**/*.{js,ts,vue}'],
   darkMode: 'class',
   theme: {
     screens: {
@@ -11,17 +9,17 @@ module.exports = {
       lg: '976px',
       xl: '1366px',
     },
-     colors: {
-      'white': '#fff',
-      'dark': '#19191A',
+    colors: {
+      white: '#fff',
+      dark: '#19191A',
       'dark-light': '#232324',
-      'gray': '#F6F7F8',
-      'blue': '#00103D',
+      gray: '#F6F7F8',
+      blue: '#00103D',
     },
     fontFamily: {
-      sans: ['Arial', 'sans-serif']
+      sans: ['Arial', 'sans-serif'],
     },
     extend: {},
   },
   plugins: [],
-}
+};
