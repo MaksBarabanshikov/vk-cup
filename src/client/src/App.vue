@@ -1,12 +1,7 @@
 <script setup>
-import {useDark, useToggle} from "@vueuse/core";
 import VHeader from "@/components/VHeader.vue";
 import VSideBar from "@/components/VSideBar.vue";
-
-const isDark = useDark();
-
-const toggleDark = useToggle(isDark)
-
+import VFooter from "@/components/VFooter.vue";
 </script>
 
 <template>
@@ -15,14 +10,10 @@ const toggleDark = useToggle(isDark)
     <v-side-bar />
     <router-view />
   </div>
-  <h2 @click="toggleDark()" class="bg-dark text-gray cursor-pointer ">Тема: {{ isDark }}</h2>
+  <v-footer />
 </template>
 
 <style lang="scss" scoped>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .logo {
   height: 6em;
   padding: 1.5em;
