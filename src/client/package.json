@@ -10,8 +10,7 @@
     "prepare": "cd D:\\_projects\\vk-cup && husky install",
     "lint": "eslint src --ext .js",
     "lint:fix": "eslint src --ext .js --fix",
-    "prettier": "prettier .  --write",
-    "pre-commit": "lint-staged"
+    "prettier": "prettier .  --write"
   },
   "dependencies": {
     "@rushstack/eslint-patch": "^1.2.0",

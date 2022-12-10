@@ -4,7 +4,7 @@
   import { useDark } from '@vueuse/core';
   import { computed } from 'vue';
 
-  const currentLogo = computed(() => useDark() ? logoDark : logoLight);
+  const currentLogo = computed(() => (useDark() ? logoDark : logoLight));
 </script>
 
 <template>

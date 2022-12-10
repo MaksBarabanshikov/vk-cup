@@ -5,7 +5,7 @@
 
 <template>
   <v-header />
-  <main class="flex ">
+  <main class="flex">
     <v-side-bar />
     <router-view />
   </main>
