@@ -1,6 +1,7 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
 import {useDark, useToggle} from "@vueuse/core";
+import VHeader from "@/components/VHeader.vue";
+import VSideBar from "@/components/VSideBar.vue";
 
 const isDark = useDark();
 
@@ -9,16 +10,12 @@ const toggleDark = useToggle(isDark)
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo " alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <v-header />
+  <div class="flex">
+    <v-side-bar />
+    <router-view />
   </div>
-  <h2 @click="toggleDark()" class="bg-dark text-gray cursor-pointer">Тема: {{ isDark }}</h2>
-  <HelloWorld msg="Vite + Vue" />
+  <h2 @click="toggleDark()" class="bg-dark text-gray cursor-pointer ">Тема: {{ isDark }}</h2>
 </template>
 
 <style lang="scss" scoped>
